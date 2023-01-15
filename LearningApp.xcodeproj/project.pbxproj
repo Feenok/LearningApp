@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9A925A4297377F400936C50 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A925A3297377F400936C50 /* TestView.swift */; };
 		E9CCFA8A2966531900E87FCF /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFA892966531900E87FCF /* LearningApp.swift */; };
 		E9CCFA8C2966531900E87FCF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFA8B2966531900E87FCF /* HomeView.swift */; };
 		E9CCFA8E2966531C00E87FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CCFA8D2966531C00E87FCF /* Assets.xcassets */; };
@@ -15,9 +16,17 @@
 		E9CCFAA029665D2700E87FCF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E9CCFA9E29665D2700E87FCF /* data.json */; };
 		E9CCFAA129665D2700E87FCF /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = E9CCFA9F29665D2700E87FCF /* style.html */; };
 		E9CCFAA32966603F00E87FCF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAA22966603F00E87FCF /* Models.swift */; };
+		E9CCFAA52967B6B400E87FCF /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAA42967B6B300E87FCF /* HomeViewRow.swift */; };
+		E9CCFAA72968A0FE00E87FCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAA62968A0FE00E87FCF /* ContentView.swift */; };
+		E9CCFAA92968AE2100E87FCF /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAA82968AE2100E87FCF /* ContentViewRow.swift */; };
+		E9CCFAAB296CC65800E87FCF /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAAA296CC65800E87FCF /* ContentDetailView.swift */; };
+		E9CCFAAE296CCEFC00E87FCF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CCFAAD296CCEFC00E87FCF /* AVKit.framework */; };
+		E9CCFAB0296CD01700E87FCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAAF296CD01700E87FCF /* Constants.swift */; };
+		E9CCFAED296E0C7700E87FCF /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFAEC296E0C7700E87FCF /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9A925A3297377F400936C50 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E9CCFA862966531900E87FCF /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CCFA892966531900E87FCF /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
 		E9CCFA8B2966531900E87FCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -27,6 +36,13 @@
 		E9CCFA9E29665D2700E87FCF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		E9CCFA9F29665D2700E87FCF /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		E9CCFAA22966603F00E87FCF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		E9CCFAA42967B6B300E87FCF /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
+		E9CCFAA62968A0FE00E87FCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9CCFAA82968AE2100E87FCF /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		E9CCFAAA296CC65800E87FCF /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		E9CCFAAD296CCEFC00E87FCF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		E9CCFAAF296CD01700E87FCF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9CCFAEC296E0C7700E87FCF /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CCFAAE296CCEFC00E87FCF /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +62,7 @@
 			children = (
 				E9CCFA882966531900E87FCF /* LearningApp */,
 				E9CCFA872966531900E87FCF /* Products */,
+				E9CCFAAC296CCEFB00E87FCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +101,12 @@
 			isa = PBXGroup;
 			children = (
 				E9CCFA8B2966531900E87FCF /* HomeView.swift */,
+				E9CCFAA42967B6B300E87FCF /* HomeViewRow.swift */,
+				E9CCFAA62968A0FE00E87FCF /* ContentView.swift */,
+				E9CCFAA82968AE2100E87FCF /* ContentViewRow.swift */,
+				E9A925A3297377F400936C50 /* TestView.swift */,
+				E9CCFAAA296CC65800E87FCF /* ContentDetailView.swift */,
+				E9CCFAEC296E0C7700E87FCF /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +132,7 @@
 			children = (
 				E9CCFA9E29665D2700E87FCF /* data.json */,
 				E9CCFA9F29665D2700E87FCF /* style.html */,
+				E9CCFAAF296CD01700E87FCF /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,6 +142,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E9CCFAAC296CCEFB00E87FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9CCFAAD296CCEFC00E87FCF /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +225,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CCFA8C2966531900E87FCF /* HomeView.swift in Sources */,
+				E9CCFAA52967B6B400E87FCF /* HomeViewRow.swift in Sources */,
+				E9A925A4297377F400936C50 /* TestView.swift in Sources */,
+				E9CCFAA72968A0FE00E87FCF /* ContentView.swift in Sources */,
+				E9CCFAAB296CC65800E87FCF /* ContentDetailView.swift in Sources */,
 				E9CCFA8A2966531900E87FCF /* LearningApp.swift in Sources */,
+				E9CCFAA92968AE2100E87FCF /* ContentViewRow.swift in Sources */,
+				E9CCFAED296E0C7700E87FCF /* CodeTextView.swift in Sources */,
 				E9CCFA9D2966546700E87FCF /* ContentModel.swift in Sources */,
 				E9CCFAA32966603F00E87FCF /* Models.swift in Sources */,
+				E9CCFAB0296CD01700E87FCF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
