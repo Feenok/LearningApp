@@ -10,17 +10,112 @@ import SwiftUI
 struct TestView: View {
     
     @EnvironmentObject var model: ContentModel
+    @State var selectedAnswerIndex = -1
+    @State var numCorrect = 0
+    @State var submitted = false
     
     var body: some View {
         if model.currentQ != nil {
-            VStack {
+            VStack (alignment: .leading) {
                 //Question number
                 Text("Question \(model.currentQIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
+                    .padding(.leading, 20)
                 //Question
                 CodeTextView()
-                
+                    .padding(.horizontal, 20)
                 //Answers
-                //Button
+                ScrollView {
+                    VStack {
+                        ForEach (0..<model.currentQ!.answers.count, id: \.self) { index in
+                            
+                            
+                            Button {
+                                //Track the selected index
+                                selectedAnswerIndex = index
+                                
+                                
+                            } label: {
+                                ZStack {
+                                    if submitted == false {
+                                        
+                                        Rectangle()
+                                            .foregroundColor(selectedAnswerIndex == index ? .gray : .white)
+                                            .cornerRadius(10)
+                                            .shadow(radius: 5)
+                                            .frame(height: 48)
+                                    }
+                                    else {
+                                        // Answer has been submitted
+                                        if index == selectedAnswerIndex && index == model.currentQ?.correctIndex {
+                                            //User has selected right answer
+                                            //Show green background
+                                            Rectangle()
+                                                .foregroundColor(.green)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 5)
+                                                .frame(height: 48)
+                                        }
+                                        else if index == selectedAnswerIndex && index != model.currentQ!.correctIndex {
+                                            //User has selected wrong answer
+                                            //Show a red background
+                                            Rectangle()
+                                                .foregroundColor(.red)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 5)
+                                                .frame(height: 48)
+                                        }
+                                        else if index == model.currentQ!.correctIndex {
+                                            //This button is correct answer
+                                            //Show reen background
+                                            Rectangle()
+                                                .foregroundColor(.green)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 5)
+                                                .frame(height: 48)
+                                        }
+                                        else {
+                                            Rectangle()
+                                                .foregroundColor(.white)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 5)
+                                                .frame(height: 48)
+                                        }
+                                    }
+                                    Text(model.currentQ!.answers[index])
+                                }
+                                }
+                                .disabled(submitted)
+                            }
+                        }
+                        .padding()
+                        .accentColor(.black)
+                    }
+                
+                //Submit Button
+                Button {
+                    //Change the submitted state to true
+                    submitted =  true
+                    
+                    //Check the answer, and increment the counter if correct
+                    if selectedAnswerIndex == model.currentQ!.correctIndex {
+                        numCorrect += 1
+                    }
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.green)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .frame(height: 48)
+                        Text("Submit")
+                            
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                    .padding()
+                }
+                .disabled(selectedAnswerIndex == -1)
+
             }
             .navigationTitle("\(model.currentModule?.category ?? "") Test")
         }
@@ -31,8 +126,3 @@ struct TestView: View {
     }
 }
 
-struct TestView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestView()
-    }
-}
