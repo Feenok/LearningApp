@@ -93,13 +93,27 @@ struct TestView: View {
                 
                 //Submit Button
                 Button {
-                    //Change the submitted state to true
-                    submitted =  true
-                    
-                    //Check the answer, and increment the counter if correct
-                    if selectedAnswerIndex == model.currentQ!.correctIndex {
-                        numCorrect += 1
+                    //Check if answer has been submitted
+                    if submitted == true {
+                        //Answer has already been submitted, move to next question
+                        model.nextQuestion()
+                        
+                        //Reset the properties
+                        submitted = false
+                        selectedAnswerIndex = -1
                     }
+                    else {
+                        //Answer not submitted, submit the answer
+                        
+                        //Change the submitted state to true
+                        submitted =  true
+                        
+                        //Check the answer, and increment the counter if correct
+                        if selectedAnswerIndex == model.currentQ!.correctIndex {
+                            numCorrect += 1
+                        }
+                    }
+                    
                 } label: {
                     ZStack {
                         Rectangle()
@@ -107,7 +121,7 @@ struct TestView: View {
                             .cornerRadius(10)
                             .shadow(radius: 5)
                             .frame(height: 48)
-                        Text("Submit")
+                        Text(buttonText)
                             
                             .foregroundColor(.white)
                             .bold()
@@ -122,6 +136,21 @@ struct TestView: View {
         else {
             //Test hasnt loaded yet (this is needed to trigger onAppear func in HomeView for TestView
             ProgressView()
+        }
+    }
+    
+    var buttonText:String {
+        //Check if answer has been submitted
+        if submitted == true {
+            if model.currentQIndex + 1 == model.currentModule!.test.questions.count {
+                return "Finish Test"
+            }
+            else {
+                return "Next" // or finish
+            }
+        }
+        else {
+            return "Submit"
         }
     }
 }
