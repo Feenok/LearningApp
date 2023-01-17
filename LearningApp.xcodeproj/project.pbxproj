@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9A925A4297377F400936C50 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A925A3297377F400936C50 /* TestView.swift */; };
+		E9A925A62977090C00936C50 /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A925A52977090C00936C50 /* TestResultView.swift */; };
 		E9CCFA8A2966531900E87FCF /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFA892966531900E87FCF /* LearningApp.swift */; };
 		E9CCFA8C2966531900E87FCF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCFA8B2966531900E87FCF /* HomeView.swift */; };
 		E9CCFA8E2966531C00E87FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CCFA8D2966531C00E87FCF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		E9A925A3297377F400936C50 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		E9A925A52977090C00936C50 /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		E9CCFA862966531900E87FCF /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CCFA892966531900E87FCF /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
 		E9CCFA8B2966531900E87FCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				E9CCFAA62968A0FE00E87FCF /* ContentView.swift */,
 				E9CCFAA82968AE2100E87FCF /* ContentViewRow.swift */,
 				E9A925A3297377F400936C50 /* TestView.swift */,
+				E9A925A52977090C00936C50 /* TestResultView.swift */,
 				E9CCFAAA296CC65800E87FCF /* ContentDetailView.swift */,
 				E9CCFAEC296E0C7700E87FCF /* CodeTextView.swift */,
 			);
@@ -233,6 +236,7 @@
 				E9CCFAA92968AE2100E87FCF /* ContentViewRow.swift in Sources */,
 				E9CCFAED296E0C7700E87FCF /* CodeTextView.swift in Sources */,
 				E9CCFA9D2966546700E87FCF /* ContentModel.swift in Sources */,
+				E9A925A62977090C00936C50 /* TestResultView.swift in Sources */,
 				E9CCFAA32966603F00E87FCF /* Models.swift in Sources */,
 				E9CCFAB0296CD01700E87FCF /* Constants.swift in Sources */,
 			);

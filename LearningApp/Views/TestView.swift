@@ -134,8 +134,11 @@ struct TestView: View {
             .navigationTitle("\(model.currentModule?.category ?? "") Test")
         }
         else {
-            //Test hasnt loaded yet (this is needed to trigger onAppear func in HomeView for TestView
-            ProgressView()
+            //If current question is nil, show result view
+            TestResultView(numCorrect: numCorrect)
+            
+//            //Test hasnt loaded yet (code below is needed to trigger onAppear func in HomeView for TestView
+//            ProgressView()
         }
     }
     
